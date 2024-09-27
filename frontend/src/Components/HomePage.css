@@ -1,0 +1,17 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-content {
+  flex: 1; /* Ensures content takes up remaining space between NavBar and Footer */
+  text-align: center;
+  padding: 20px;
+}
+
+.home-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
