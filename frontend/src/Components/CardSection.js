@@ -8,10 +8,10 @@ import img4 from "../assets/images/img4.jpg";
 import img5 from "../assets/images/img5.jpg";
 import img6 from "../assets/images/img6.jpg";
 import img7 from "../assets/images/img7.jpg";
-//import img8 from "../assets/images/img8.jpg";
-//import img9 from "../assets/images/img9.jpg";
-import img11 from "../assets/images/img11.jpg";
-import img12 from "../assets/images/img12.jpg";
+import img8 from "../assets/images/img8.jpg";
+import img9 from "../assets/images/img9.jpg";
+//import img11 from "../assets/images/img11.jpg";
+//import img12 from "../assets/images/img12.jpg";
 
 // ... (Add more images up to img9)
 
@@ -24,8 +24,8 @@ const CardSection = () => {
     { id: 5, imgSrc: img5, title: "Card 2", link: "/details/5" },
     { id: 6, imgSrc: img6, title: "Card 2", link: "/details/6" },
     { id: 7, imgSrc: img7, title: "Card 2", link: "/details/7" },
-    //{ id: 8, imgSrc: img8, title: "Card 2", link: "/details/8" },
-    //{ id: 9, imgSrc: img9, title: "Card 2", link: "/details/9" },
+    { id: 8, imgSrc: img8, title: "Card 2", link: "/details/8" },
+    { id: 9, imgSrc: img9, title: "Card 2", link: "/details/9" },
     //{ id: 10, imgSrc: img10, title: "Card 3", link: "/details/10" },
 
     // ... Add more cards for each image
