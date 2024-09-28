@@ -11,6 +11,8 @@ import img3 from "../assets/images/img3.jpg";
 //import img8 from "../assets/images/img8.jpg";
 //import img9 from "../assets/images/img9.jpg";
 import img11 from "../assets/images/img11.jpg";
+import img12 from "../assets/images/img12.jpg";
+
 // ... (Add more images up to img9)
 
 const CardSection = () => {
