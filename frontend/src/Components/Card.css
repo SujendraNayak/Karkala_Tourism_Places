@@ -9,7 +9,8 @@
     background-color 0.4s ease; /* Smooth transitions */
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
+  
+  /*background: linear-gradient(
     135deg,
     #ff9a9e,
     #fad0c4,

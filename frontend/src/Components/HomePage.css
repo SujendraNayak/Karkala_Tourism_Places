@@ -1,57 +1,74 @@
+/* HomePage.css */
+
 .home-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #6792b7; /* Changed background color */
+  background-color: #f4f7f6; /* Fallback background color */
 }
 
 .home-content {
-  flex: 1; /* Ensures content takes up remaining space between NavBar and Footer */
+  flex: 1;
   text-align: center;
-  padding: 20px;
+  padding: 50px 20px;
+  background-image: url("../assets/images/main.jpg"); /* Set background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  animation: zoomInBackground 10s ease-in-out infinite; /* Apply zoom-in animation */
+  transition: background-size 2s ease-in-out;
 }
 
-.home-image {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+.home-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text contrast */
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Zoom-in animation for the background image */
+@keyframes zoomInBackground {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 105%; /* Slight zoom-in */
+  }
+  100% {
+    background-size: 100%; /* Reset to original size */
   }
 }
 
-.App-header {
-  background-color: #4a90e2; /* Changed to a lighter blue */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(90, 34, 34);
+.animated-heading {
+  position: relative;
+  color: white; /* Ensures text stands out on the image */
+  z-index: 1;
+  font-size: 3em;
+  margin-bottom: 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Initially off-screen */
+  animation: slideIn 2s ease-in-out forwards; /* Apply slide-in animation */
 }
 
-.App-link {
-  color: #ae60c0;
+/* Slide-in animation for the heading */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in final position */
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  position: relative;
+  color: white;
+  z-index: 1;
+  font-size: 1.2em;
 }

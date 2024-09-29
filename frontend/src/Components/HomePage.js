@@ -2,7 +2,6 @@ import React from "react";
 import "./HomePage.css";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-import homeImage from "../assets/images/main.jpg"; // Replace with the actual image file and path
 import CardSection from "./CardSection"; // Import the card section
 
 const HomePage = () => {
@@ -10,8 +9,10 @@ const HomePage = () => {
     <div className="home-page">
       <NavBar />
       <div className="home-content">
-        <h1>Welcome to My App</h1>
-        <img src={homeImage} alt="Home" className="home-image" />
+        <h1 className="animated-heading">Welcome to Karkala</h1>
+        <p>
+          Discover the amazing features of our platform. Start your journey today and transform the way you work!
+        </p>
       </div>
       <CardSection /> {/* Add the card section here */}
       <Footer />
