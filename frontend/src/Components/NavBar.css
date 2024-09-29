@@ -2,9 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;  /* Decreased padding to reduce overall size */
-  background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);  /* Gradient background */
+  padding: 0.2rem;  /* Decreased padding to reduce overall size */
+  /*background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);  /* Gradient background */
   color: white;
+  background: rgb(225, 76, 76);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
   transition: background-color 0.3s ease;
 }

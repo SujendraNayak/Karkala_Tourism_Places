@@ -9,7 +9,7 @@ const HomePage = () => {
     <div className="home-page">
       <NavBar />
       <div className="home-content">
-        <h1 className="animated-heading">Welcome to Karkala</h1>
+        <h1 className="animated-heading">Welcome to Karkala...</h1>
         <p>
           Discover the amazing features of our platform. Start your journey today and transform the way you work!
         </p>

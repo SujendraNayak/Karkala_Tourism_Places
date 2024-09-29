@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f4f7f6; /* Fallback background color */
+  background-color: white; /* Fallback background color */
 }
 
 .home-content {
@@ -27,7 +27,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay for better text contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text contrast */
+  z-index: 0; /* Ensures the overlay is behind the text */
 }
 
 /* Zoom-in animation for the background image */
@@ -43,6 +44,7 @@
   }
 }
 
+/* Animated Heading with Slide-in Effect */
 .animated-heading {
   position: relative;
   color: white; /* Ensures text stands out on the image */
@@ -51,7 +53,7 @@
   margin-bottom: 20px;
   opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Initially off-screen */
-  animation: slideIn 2s ease-in-out forwards; /* Apply slide-in animation */
+  animation: slideIn 2s ease-in-out forwards, pulse 3s infinite; /* Apply slide-in and pulsate animation */
 }
 
 /* Slide-in animation for the heading */
@@ -66,9 +68,39 @@
   }
 }
 
+/* Pulse animation for subtle movement */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Text paragraph styling */
 p {
   position: relative;
   color: white;
   z-index: 1;
   font-size: 1.2em;
+  margin-top: 10px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px);
+  animation: fadeInText 2.5s ease-in-out forwards; /* Fade-in for paragraph */
+}
+
+/* Fade-in animation for paragraph text */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
