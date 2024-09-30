@@ -10,6 +10,9 @@ import img6 from "../assets/images/img6.jpg";
 import img7 from "../assets/images/img7.jpg";
 import img8 from "../assets/images/img8.jpg";
 import img9 from "../assets/images/img9.jpg";
+import img10 from "../assets/images/img10.jpg";
+import img11 from "../assets/images/img11.jpg";
+import img12 from "../assets/images/img12.jpg";
 
 const CardSection = () => {
   const cards = [
@@ -22,6 +25,10 @@ const CardSection = () => {
     { id: 7, imgSrc: img7, title: "Card 7", link: "/details/7" },
     { id: 8, imgSrc: img8, title: "Card 8", link: "/details/8" },
     { id: 9, imgSrc: img9, title: "Card 9", link: "/details/9" },
+    { id: 10, imgSrc: img10, title: "Card 10", link: "/details/10" },
+    { id: 11, imgSrc: img11, title: "Card 11", link: "/details/11" },
+    { id: 12, imgSrc: img12, title: "Card 12",link:"/details/12"},
+
   ];
 
   return (
