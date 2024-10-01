@@ -1,0 +1,38 @@
+.details-page {
+  display: flex;
+  align-items: flex-start; /* Align items at the start vertically */
+  height: auto; /* Height adjusted for dynamic content */
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+.image-container {
+  border: 2px solid #ccc; /* Add a border around the image */
+  border-radius: 10px; /* Optional: Rounded corners for the border */
+  margin-right: 20px; /* Space between the image and text */
+}
+
+.card-image {
+  width: 250px; /* Set a fixed width for the image */
+  height: 250px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.text-content {
+  flex: 1; /* Allow the text to take the remaining space */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
