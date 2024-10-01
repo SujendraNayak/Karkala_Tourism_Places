@@ -27,7 +27,7 @@ const CardSection = () => {
     { id: 9, imgSrc: img9, title: "Card 9", link: "/details/9" },
     { id: 10, imgSrc: img10, title: "Card 10", link: "/details/10" },
     { id: 11, imgSrc: img11, title: "Card 11", link: "/details/11" },
-    { id: 12, imgSrc: img12, title: "Card 12",link:"/details/12"},
+    { id: 12, imgSrc: img12, title: "Nitte Arbhi Falls",link:"/details/12"},
 
   ];
 
