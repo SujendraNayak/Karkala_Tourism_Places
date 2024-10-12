@@ -21,13 +21,18 @@
 }
 
 .home-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text contrast */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adds a dark overlay for better text contrast */
   z-index: 0; /* Ensures the overlay is behind the text */
 }
 
@@ -47,7 +52,7 @@
 /* Animated Heading with Slide-in Effect */
 .animated-heading {
   position: relative;
-  color: white; /* Ensures text stands out on the image */
+  color: rgb(242, 238, 238); /* Ensures text stands out on the image */
   z-index: 1;
   font-size: 3em;
   margin-bottom: 20px;
@@ -84,7 +89,7 @@
 /* Text paragraph styling */
 p {
   position: relative;
-  color: white;
+  color: rgb(225, 216, 44);
   z-index: 1;
   font-size: 1.2em;
   margin-top: 10px;

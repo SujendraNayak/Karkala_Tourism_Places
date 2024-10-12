@@ -1,8 +1,16 @@
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  font-family: sans-serif;
+  color: rgb(227, 23, 0);
+}
+
 .details-page {
   display: flex;
   align-items: flex-start; /* Align items at the start vertically */
   height: auto; /* Height adjusted for dynamic content */
-  background-color: #f4f4f9;
+
   padding: 20px;
 }
 
@@ -10,12 +18,20 @@
   border: 2px solid #ccc; /* Add a border around the image */
   border-radius: 10px; /* Optional: Rounded corners for the border */
   margin-right: 20px; /* Space between the image and text */
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .card-image {
   width: 250px; /* Set a fixed width for the image */
   height: 250px; /* Set a fixed height for the image */
   object-fit: cover; /* Ensure the image covers the entire area */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-image:hover {
+  transform: scale(1.05);
 }
 
 .text-content {
