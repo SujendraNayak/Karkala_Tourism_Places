@@ -1,124 +1,65 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-
-// Importing local images
-import img1 from "../assets/images/img1.jpg";
+import "./DetailsPage.css";
+import Footer from "./Footer";
+import img9 from "../assets/images/img9.jpg";
 import img2 from "../assets/images/img2.jpg";
+import img3 from "../assets/images/img3.jpg";
 
 const DetailsPage = () => {
   const { id } = useParams(); // Get the card id from the URL
+  //Array deatils each card
 
-  // Card details for Gommateshwara statue
-  const cardDetails = {
-    img1: {
-      title: "Gommateshwara Statue (Image 1)",
-      description: (
-        <>
-          <h3>Construction</h3>
-          <p>
-            The statue was built in 1432 by Veera Pandya Bhairarasa Wodeyar, the
-            scion of the Bhair Arasa dynasty. The statue was inspired by the
-            larger Gommateshwara statue in Shravanabelagola, which was built in
-            983.
-          </p>
-          <h3>Mahamastakabhisheka</h3>
-          <p>
-            This festival is held every 12 years, when the statue is bathed with
-            milk, water, saffron paste, sandalwood powder, turmeric, and
-            vermillion. Devotees carry 1,008 specially prepared vessels
-            (Kalashas) to sprinkle consecrated water on participants as the
-            festival begins.
-          </p>
-          <h3>Location</h3>
-          <p>
-            The statue is located on a rocky hill called Gommata Betta. It's on
-            an elevated platform and is enclosed by a cloistered prakaram.
-          </p>
-          <h3>Size</h3>
-          <p>
-            The statue is 42 feet tall and 10.33 feet wide, and is said to weigh
-            around 80 tons. It's the second tallest statue of Bahubali in the
-            world.
-          </p>
-          <h3>Meaning</h3>
-          <p>
-            Gomateshwara was the second son of the first Tirthankara of Jains.
-            He taught people to live in harmony with nature and to not harm any
-            living being.
-          </p>
-          <h3>Nearby Attractions</h3>
-          <p>
-            There are 18 Jain Basadis in the area, including Chaturmukha Basadi
-            and Kere Basadi. Moodabidri is another important Jain center nearby.
-          </p>
-        </>
-      ),
-      image: img1,
+  const details = [
+    {
+      id: "1",
+      image: img9,
+      title: "Gommateshwara Statue",
+      name: "Construction",
+      description:
+        "The statue was built in 1432 by Veera Pandya Bhairarasa Wodeyar...",
     },
-    img2: {
-      title: "Gommateshwara Statue (Image 2)",
-      description: (
-        <>
-          <h3>Construction</h3>
-          <p>
-            The statue was built in 1432 by Veera Pandya Bhairarasa Wodeyar, the
-            scion of the Bhair Arasa dynasty. The statue was inspired by the
-            larger Gommateshwara statue in Shravanabelagola, which was built in
-            983.
-          </p>
-          <h3>Mahamastakabhisheka</h3>
-          <p>
-            This festival is held every 12 years, when the statue is bathed with
-            milk, water, saffron paste, sandalwood powder, turmeric, and
-            vermillion. Devotees carry 1,008 specially prepared vessels
-            (Kalashas) to sprinkle consecrated water on participants as the
-            festival begins.
-          </p>
-          <h3>Location</h3>
-          <p>
-            The statue is located on a rocky hill called Gommata Betta. It's on
-            an elevated platform and is enclosed by a cloistered prakaram.
-          </p>
-          <h3>Size</h3>
-          <p>
-            The statue is 42 feet tall and 10.33 feet wide, and is said to weigh
-            around 80 tons. It's the second tallest statue of Bahubali in the
-            world.
-          </p>
-          <h3>Meaning</h3>
-          <p>
-            Gomateshwara was the second son of the first Tirthankara of Jains.
-            He taught people to live in harmony with nature and to not harm any
-            living being.
-          </p>
-          <h3>Nearby Attractions</h3>
-          <p>
-            There are 18 Jain Basadis in the area, including Chaturmukha Basadi
-            and Kere Basadi. Moodabidri is another important Jain center nearby.
-          </p>
-        </>
-      ),
+    {
+      id: "2",
       image: img2,
+      title: "Manasthamba",
+      name: "Symbol of Faith",
+      description:
+        "Manasthamba is a column often found in front of Jain temples...",
     },
-  };
+    {
+      id: "3",
+      image: img3,
+      title: "Nitte Arbhi Falls",
+      name: "Natural Wonder",
+      description:
+        "Nitte Arbhi Falls is a hidden gem located in the coastal region...",
+    },
+  ];
+  // Find the details for the current card based on the id
+  const currentDetail = details.find((detail) => detail.id === id);
 
-  // Dynamically get the card details based on the id from the URL
-  const card = cardDetails[id] || {
-    title: "Unknown Card",
-    description: <p>Details for card {id} are not available.</p>,
-    image: img1,
-  };
-
+  if (!currentDetail) {
+    return <p>Card not found</p>;
+  }
   return (
-    <div className="details-page">
-      <div className="image-container">
-        <img src={card.image} alt={card.title} className="card-image" />
+    <>
+      <h3 >{currentDetail.title}</h3>
+      <div className="details-page">
+        <div className="image-container">
+          <img
+            src={currentDetail.image}
+            alt={currentDetail.title}
+            className="card-image"
+          />
+        </div>
+        <div className="text-content">
+          <h1>{currentDetail.name}</h1>
+          <p>{currentDetail.description}</p>
+        </div>
       </div>
-      <div className="text-content">
-        <h1>{card.title}</h1>
-        <div>{card.description}</div>
-      </div>
-    </div>
+      <Footer /> {/* Footer at the bottom */}
+    </>
   );
 };
 
