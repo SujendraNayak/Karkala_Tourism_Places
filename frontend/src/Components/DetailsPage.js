@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import "./DetailsPage.css";
 import Footer from "./Footer";
-import img9 from "../assets/images/img9.jpg";
+import img13 from "../assets/images/img13.jpg";
 import img2 from "../assets/images/img2.jpg";
 import img3 from "../assets/images/img3.jpg";
 
@@ -13,7 +13,7 @@ const DetailsPage = () => {
   const details = [
     {
       id: "1",
-      image: img9,
+      image: img13,
       title: "Gommateshwara Statue",
       name: "Construction",
       description: `
