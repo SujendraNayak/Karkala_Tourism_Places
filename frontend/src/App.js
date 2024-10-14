@@ -9,8 +9,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage />} /> {/* Home Page */}
-          <Route path="/details/:id" element={<DetailsPage />} />{" "}
-          {/* Dynamic details page */}
+          <Route path="/details/:id" element={<DetailsPage />} /> {/* Dynamic details page */}
         </Routes>
       </div>
     </Router>
