@@ -4,7 +4,7 @@ import "./Footer.css"; // Optional: Add custom styles for the footer
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2024 Karkala tourism places App. All rights reserved.</p>
+      <p>© 2024 Karkala Tourism Places App. All rights reserved.</p>
       <ul className="footer-links">
         <li>
           <a href="/privacy-policy">Privacy Policy</a>
