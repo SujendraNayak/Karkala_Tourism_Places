@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 
 // Importing local images
 import img1 from "../assets/images/img1.jpg";
@@ -119,7 +120,7 @@ const DetailsPage = () => {
         <div>{card.description}</div>
       </div>
       <Footer /> {/* Footer at the bottom */}
-    </>
+    </div>
   );
 };
 
