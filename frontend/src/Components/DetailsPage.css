@@ -1,54 +1,74 @@
-h3 {
-  display: flex;
-  justify-content: center;
-  font-size: large;
-  font-family: sans-serif;
-  color: rgb(227, 23, 0);
-}
-
+/* General page styling */
 .details-page {
   display: flex;
-  align-items: flex-start; /* Align items at the start vertically */
-  height: auto; /* Height adjusted for dynamic content */
-
+  align-items: flex-start; /* Align items to start vertically */
   padding: 20px;
+  gap: 20px; /* Add spacing between image and text content */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .image-container {
-  border: 2px solid #ccc; /* Add a border around the image */
-  border-radius: 10px; /* Optional: Rounded corners for the border */
-  margin-right: 20px; /* Space between the image and text */
-  margin-bottom: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc; /* Border around the image */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   overflow: hidden;
+  width: 250px; /* Fixed width for image container */
+  height: 250px; /* Fixed height for image container */
+  flex-shrink: 0; /* Prevent container from shrinking */
 }
 
 .card-image {
-  width: 250px; /* Set a fixed width for the image */
-  height: 250px; /* Set a fixed height for the image */
-  object-fit: cover; /* Ensure the image covers the entire area */
+  width: 100%; /* Full width within container */
+  height: 100%; /* Full height within container */
+  object-fit: cover; /* Ensure image fills container */
   transition: transform 0.3s ease-in-out;
 }
 
 .card-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .text-content {
-  flex: 1; /* Allow the text to take the remaining space */
+  flex: 1; /* Allow text to take up remaining space */
+  max-width: 600px; /* Set max-width to limit content spread */
 }
 
+/* Headings and paragraph styling */
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 h3 {
+  display: flex;
+  justify-content: center;
   font-size: 20px;
+  font-family: sans-serif;
+  color: rgb(227, 23, 0);
   margin-top: 15px;
 }
 
 p {
   font-size: 16px;
   color: #666;
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .details-page {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center content on smaller screens */
+  }
+
+  .image-container {
+    width: 80%; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  .text-content {
+    max-width: 100%; /* Full width on smaller screens */
+  }
 }
