@@ -3,19 +3,20 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 330vh;
   background-color: white; /* Fallback background color */
 }
 
 .home-content {
   flex: 1;
   text-align: center;
-  padding: 50px 20px;
+  padding: 0; /* Remove padding to ensure the image covers the full page */
   background-image: url("../assets/images/main.jpg"); /* Set background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: 120%; /* Increased size to make the image larger */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
   position: relative;
+  height: 100vh; /* Ensure the content area fills the full height of the viewport */
   animation: zoomInBackground 10s ease-in-out infinite; /* Apply zoom-in animation */
   transition: background-size 2s ease-in-out;
 }
@@ -27,13 +28,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Adds a dark overlay for better text contrast */
-  z-index: 0; /* Ensures the overlay is behind the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
+  z-index: 0; /* Ensure the overlay is behind the text */
 }
 
 /* Zoom-in animation for the background image */
@@ -42,10 +38,10 @@
     background-size: 100%;
   }
   50% {
-    background-size: 105%; /* Slight zoom-in */
+    background-size: 110%; /* Slight zoom-in */
   }
   100% {
-    background-size: 100%; /* Reset to original size */
+    background-size: 120%; /* Reset to original size */
   }
 }
 

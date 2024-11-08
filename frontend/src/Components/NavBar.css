@@ -5,15 +5,15 @@
   padding: 0.2rem;  /* Decreased padding to reduce overall size */
   /*background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);  /* Gradient background */
   color: white;
-  background: rgb(225, 76, 76);
+  background:linear-gradient(90deg, #ff7e5f, #feb47b);  ;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
   transition: background-color 0.3s ease;
 }
 
 .logo {
-  font-size: 1.2rem;  /* Reduced font size for the logo */
+  font-size: 1.5rem;  /* Reduced font size for the logo */
   font-weight: bold;
-  color: #ffffff;
+  color: #ecebf2;
 }
 
 .nav-links {
