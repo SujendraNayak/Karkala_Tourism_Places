@@ -73,7 +73,7 @@ p {
   }
 
   .image-container {
-    width: 90%;
+    width: 100%;
     height: auto;
     max-height: 500px;
     margin-bottom: 20px;
