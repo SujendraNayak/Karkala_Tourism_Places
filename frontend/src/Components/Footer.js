@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>© 2024 Karkala Tourism Places App. All rights reserved.</p>
+      <p>Created by Sujendra Nayak and Sandhya Nayak.</p>
       <ul className="footer-links">
         <li>
           <a href="/privacy-policy">Privacy Policy</a>

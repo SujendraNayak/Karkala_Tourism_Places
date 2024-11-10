@@ -1,5 +1,3 @@
-/* HomePage.css */
-
 .home-page {
   display: flex;
   flex-direction: column;
@@ -9,15 +7,19 @@
 
 .home-content {
   flex: 1;
-  text-align: center;
-  padding: 0; /* Remove padding to ensure the image covers the full page */
-  background-image: url("../assets/images/main.jpg"); /* Set background image */
-  background-size: 120%; /* Increased size to make the image larger */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center-align text */
+  padding: 0;
+  background-image: url("../assets/images/main.jpg");
+  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
-  height: 100vh; /* Ensure the content area fills the full height of the viewport */
-  animation: zoomInBackground 10s ease-in-out infinite; /* Apply zoom-in animation */
+  height: 100vh;
+  animation: zoomInBackground 10s ease-in-out infinite;
   transition: background-size 2s ease-in-out;
 }
 
@@ -29,10 +31,9 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text contrast */
-  z-index: 0; /* Ensure the overlay is behind the text */
+  z-index: 0;
 }
 
-/* Zoom-in animation for the background image */
 @keyframes zoomInBackground {
   0% {
     background-size: 100%;
@@ -45,56 +46,51 @@
   }
 }
 
-/* Animated Heading with Slide-in Effect */
 .animated-heading {
   position: relative;
-  color: rgb(242, 238, 238); /* Ensures text stands out on the image */
+  color: white; /* Set heading color to white */
   z-index: 1;
   font-size: 3em;
   margin-bottom: 20px;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(50px); /* Initially off-screen */
-  animation: slideIn 2s ease-in-out forwards, pulse 3s infinite; /* Apply slide-in and pulsate animation */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 2s ease-in-out forwards, pulse 3s infinite;
 }
 
-/* Slide-in animation for the heading */
 @keyframes slideIn {
   0% {
     opacity: 0;
-    transform: translateY(50px); /* Start from below */
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* End in final position */
+    transform: translateY(0);
   }
 }
 
-/* Pulse animation for subtle movement */
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
   }
 }
 
-/* Text paragraph styling */
 p {
   position: relative;
-  color: rgb(225, 216, 44);
+  color: white; /* Set paragraph color to white */
   z-index: 1;
   font-size: 1.2em;
   margin-top: 10px;
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
   transform: translateY(20px);
-  animation: fadeInText 2.5s ease-in-out forwards; /* Fade-in for paragraph */
+  animation: fadeInText 2.5s ease-in-out forwards;
 }
 
-/* Fade-in animation for paragraph text */
 @keyframes fadeInText {
   0% {
     opacity: 0;
